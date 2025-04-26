@@ -1,0 +1,54 @@
+.registration-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f9fa;
+  }
+  
+  .registration-card {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background: white;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  .text-center a {
+    color: #007bff;
+    text-decoration: none;
+  }
+  
+  .text-center a:hover {
+    text-decoration: underline;
+  }
+  
+  .gender-options {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .form-check-input {
+    cursor: pointer;
+  }
+  
+  .form-check-label {
+    font-weight: 500;
+  }
+  
+  @media (max-width: 576px) {
+    .registration-card {
+      max-width: 90%;
+    }
+  }
+  
