@@ -24,7 +24,8 @@ import ArtEvent from "./component/ArtEvent/ArtEvent";
 import ArtMarket from "./component/ArtMarket/ArtMarket";
 import PreOwnedArts from "./component/PreOwnedArt/PreOwnedArt";
 import Registration from "./component/auth/Registration";
-import Login from "./component/auth/Login";
+//import Login from "./component/auth/Login";
+import Login from "./Login";
 import Buy from "./component/Buy/Buy";
 import Gallery from "./component/Galleries/Galleries";
 import ContactUs from "./component/ContactUs/ContactUs";
@@ -32,6 +33,11 @@ import ArtistProfile from "./component/ArtistProfile/ArtistProfile";
 import ArtOrg from "./component/ArtOrg/ArtOrg";
 import ArtHistory from "./component/ArtHistory/ArtHistory";
 import "./App.css";
+import Dashboard from "./component/AdminDashboard/Dashboard";
+import ArtistCategoryList from './component/AdminDashboard/Artist/ArtistCategoryList';
+import AddArtistCategory from "./component/AdminDashboard/Artist/AddArtistCategory";
+import ArtistProfileList from "./component/AdminDashboard/Artist/ArtistProfileList";
+import AddArtistProfile from "./component/AdminDashboard/Artist/AddArtistProfile";
 
 
 function App() {
@@ -76,7 +82,13 @@ function App() {
           <Route path="/contactUs" element={<ContactUs/>}/>
           <Route path="/artistProfile" element={<ArtistProfile/>}/>
           <Route path="/artOrg" element={<ArtOrg/>}/>
-          <Route path= "/artHistory" element={<ArtHistory/>}/>
+          <Route path= "/artHistory" element={<ArtHistory/>}/>         
+          <Route path="/dashboard" element={<Dashboard/>} />
+          <Route path="/artist-categories" element={<ArtistCategoryList/>} />
+          <Route path="/addArtistCategory" element={<AddArtistCategory/>} />
+          <Route path="/artistProfileList" element={<ArtistProfileList/>} />
+          <Route path="/add-artist" element={<AddArtistProfile/>} />
+
         </Routes>
         <Footer/>
       </div>
