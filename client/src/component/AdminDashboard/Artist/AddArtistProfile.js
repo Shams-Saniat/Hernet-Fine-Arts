@@ -5,24 +5,26 @@ import axios from 'axios';
 import toast from 'react-hot-toast';
 
 const AddArtistProfile = () => {
-    const users = {
+    const artists = {
         name: "",
         email: "",
         address: "",
+        artistDeatils: "",
+        artistCategory: "",
     };
-    const [user, setUser] = useState(users);
+    const [artist, setArtist] = useState(artists);
     const navigate = useNavigate();
 
     const inputHandler = (e) => {
         const { name, value } = e.target;
         console.log(name, value);
 
-        setUser({ ...user, [name]: value });
+        setArtist({ ...artist, [name]: value });
     };
 
     const submitForm = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:8000/api/user", user)
+        await axios.post("http://localhost:8000/api/artist", artist)
             .then((response) => {
                 toast.success(response.data.message, { position: "top-right" });
                 navigate("/");
@@ -36,39 +38,61 @@ const AddArtistProfile = () => {
         <div className='addUser'>
             <Link to="/artistProfileList" type="button" class="btn btn-secondary">
                 <i class="fa-solid fa-backward"></i> Back</Link>
-            <h3>Add New User</h3>
+            <h3>Add New Artist</h3>
             <form className="addUserForm" onSubmit={submitForm}>
                 <div className='inputGroup'>
-                    <label htmlFor="name">Name:</label>
+                    <label htmlFor="name">Artist Name:</label>
                     <input
                         type="text"
-                        id='name'
+                        id='artistName'
                         onChange={inputHandler}
-                        name='name'
+                        name='artistName'
                         autoComplete='off'
-                        placeholder='Enter your name'
+                        placeholder='Enter artist name'
                     />
                 </div>
                 <div className='inputGroup'>
-                    <label htmlFor="name">Email:</label>
+                    <label htmlFor="name">Artist Email:</label>
                     <input
                         type="email"
-                        id='email'
+                        id='artistEmail'
                         onChange={inputHandler}
-                        name='email'
+                        name='artistEmail'
                         autoComplete='off'
-                        placeholder='Enter your Email'
+                        placeholder='Enter your Artist Email'
                     />
                 </div>
                 <div className='inputGroup'>
-                    <label htmlFor="name">Address:</label>
+                    <label htmlFor="name">Artist Address:</label>
                     <input
                         type="text"
-                        id='address'
+                        id='artistAddress'
                         onChange={inputHandler}
-                        name='address'
+                        name='artistAddress'
                         autoComplete='off'
-                        placeholder='Enter your Address'
+                        placeholder='Enter Your Artist Address'
+                    />
+                </div>
+                <div className='inputGroup'>
+                    <label htmlFor="name">Artist Deatils:</label>
+                    <input
+                        type="text"
+                        id='artistDeatils'
+                        onChange={inputHandler}
+                        name='artistDeatils'
+                        autoComplete='off'
+                        placeholder='Enter Your Artist Deatils'
+                    />
+                </div>
+                 <div className='inputGroup'>
+                    <label htmlFor="name">Artist Deatils:</label>
+                    <input
+                        type="text"
+                        id='artistCategory'
+                        onChange={inputHandler}
+                        name='artistCategory'
+                        autoComplete='off'
+                        placeholder='Enter Your Artist Category'
                     />
                 </div>
                 <div className='inputGroup'>
