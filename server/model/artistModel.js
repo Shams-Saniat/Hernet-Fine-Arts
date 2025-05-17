@@ -12,11 +12,7 @@ const artistSchema = new mongoose.Schema({
     type: String,
     required: false
   },
-   artsImage: {
-    type: String,
-    required: false
-  },
- artistDeatils: {
+ artistDetails: {
     type: String,
     required: false
   },

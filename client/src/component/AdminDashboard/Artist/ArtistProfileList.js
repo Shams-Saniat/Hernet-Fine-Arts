@@ -9,7 +9,7 @@ const ArtistProfileList = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get("http://localhost:8000/api/users");
+                const response = await axios.get("http://localhost:8000/api/artists");
                 setUsers(response.data)
             } catch (error) {
                 console.log("Error while fetching data", error);
@@ -45,6 +45,8 @@ const ArtistProfileList = () => {
                             <th scope='col'>Name</th>
                             <th scope='col'>Email</th>
                             <th scope='col'>Address</th>
+                            <th scope='col'>Details</th>
+                            <th scope='col'>Category</th>
                             <th scope='col'>Actions</th>
                         </tr>
                     </thead>
@@ -56,6 +58,8 @@ const ArtistProfileList = () => {
                                     <td>{user.name}</td>
                                     <td>{user.email}</td>
                                     <td>{user.address}</td>
+                                    <td>{user.artistDetails}</td>
+                                    <td>{user.artistCategory}</td>
                                     <td className='actionButtons'>
                                         <Link to={`/update/` + user._id} type="button" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></Link>
                                         <button

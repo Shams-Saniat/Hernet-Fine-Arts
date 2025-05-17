@@ -27,7 +27,7 @@ route.delete("/delete/user/:id", deleteUser);
 
 // Artists
 route.post("/artist", createArtist);
-route.get("/artist", getAllArtist);
+route.get("/artists", getAllArtist);
 route.get("/artist/:id", getArtistById);
 route.put("/update/artist/:id", updateArtist);
 route.delete("/delete/artist/:id", deleteArtist);

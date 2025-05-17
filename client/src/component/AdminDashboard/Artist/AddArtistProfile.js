@@ -9,7 +9,7 @@ const AddArtistProfile = () => {
         name: "",
         email: "",
         address: "",
-        artistDeatils: "",
+        artistDetails: "",
         artistCategory: "",
     };
     const [artist, setArtist] = useState(artists);
@@ -44,9 +44,9 @@ const AddArtistProfile = () => {
                     <label htmlFor="name">Artist Name:</label>
                     <input
                         type="text"
-                        id='artistName'
+                        id='name'
                         onChange={inputHandler}
-                        name='artistName'
+                        name='name'
                         autoComplete='off'
                         placeholder='Enter artist name'
                     />
@@ -55,9 +55,9 @@ const AddArtistProfile = () => {
                     <label htmlFor="name">Artist Email:</label>
                     <input
                         type="email"
-                        id='artistEmail'
+                        id='email'
                         onChange={inputHandler}
-                        name='artistEmail'
+                        name='email'
                         autoComplete='off'
                         placeholder='Enter your Artist Email'
                     />
@@ -66,26 +66,26 @@ const AddArtistProfile = () => {
                     <label htmlFor="name">Artist Address:</label>
                     <input
                         type="text"
-                        id='artistAddress'
+                        id='address'
                         onChange={inputHandler}
-                        name='artistAddress'
+                        name='address'
                         autoComplete='off'
                         placeholder='Enter Your Artist Address'
                     />
                 </div>
                 <div className='inputGroup'>
-                    <label htmlFor="name">Artist Deatils:</label>
+                    <label htmlFor="name">Artist Details:</label>
                     <input
                         type="text"
-                        id='artistDeatils'
+                        id='artistDetails'
                         onChange={inputHandler}
-                        name='artistDeatils'
+                        name='artistDetails'
                         autoComplete='off'
-                        placeholder='Enter Your Artist Deatils'
+                        placeholder='Enter Your Artist Details'
                     />
                 </div>
                  <div className='inputGroup'>
-                    <label htmlFor="name">Artist Deatils:</label>
+                    <label htmlFor="name">Artist Category:</label>
                     <input
                         type="text"
                         id='artistCategory'
